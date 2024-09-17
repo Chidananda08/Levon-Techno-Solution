@@ -1,38 +1,95 @@
-.App {
+/* General App styling */
+body {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Traffic Light Styling */
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 300px;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: background-color 1s ease;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.timer {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Pedestrian Button */
+.pedestrian-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.pedestrian-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .traffic-light {
+    width: 80px;
+    height: 240px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .light {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+
+  .pedestrian-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
